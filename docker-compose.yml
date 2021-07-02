@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   nginx:
-    image: nginx:stable-alpine
+    image: k0ka/nginx-geoip2
     restart: always
     ports:
       - 80:80
