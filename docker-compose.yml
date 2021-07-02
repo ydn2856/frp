@@ -3,6 +3,7 @@ version: '3.4'
 services:
   nginx:
     image: nginx:stable-alpine
+    restart: always
     ports:
       - 80:80
       - 443:443
@@ -11,6 +12,7 @@ services:
     
   frps:
     image: snowdreamtech/frps:latest
+    restart: always
     ports:
       - 7000:7000
     volumes:
