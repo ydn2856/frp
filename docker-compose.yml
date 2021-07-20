@@ -8,8 +8,9 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./nginx.conf/:/etc/nginx/nginx.conf
-    command: /bin/sh -c "geoip2.sh"
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx_log/:/var/log/nginx/
+      - ./nginx-geoip2/GeoLite2-City_20200519/GeoLite2-City.mmdb:/var/geoip2/GeoLite2-City.mmdb
     
   frps:
     image: snowdreamtech/frps:latest
